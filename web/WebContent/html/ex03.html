@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ex03</title>
+		<style>
+			table {
+				border-collapse : collapse;
+				height : 500px; 								
+			}
+			th, td {
+				border: 1px solid;
+			}			
+			caption {
+				font-size : 20px; 
+			}
+		</style>
+	</head>
+	<body>
+		<form autocomplete='off' method="post" enctype="multipart/form-data">	
+		<table>
+			<caption>회원가입정보</caption>
+			<tr>
+				<th>아이디</th>
+				<td>
+					<div>
+						<input type = 'text' name = 'id' required style = 'margin-left : 25px'>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>비밀번호</th>
+				<td>
+					<div>
+						<input type = 'password' name = 'password' required style = 'margin-left : 25px'>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>비밀번호확인</th>
+				<td>
+					<div>
+						<input type = 'password' name = 'password' required style = 'margin-left : 25px'>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>이름</th>
+				<td>
+					<div>
+						<input type = 'text' name = 'name' required style = 'margin-left : 25px'>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>성별</th>
+				<td>
+					<div>
+						<label style = 'margin-left : 60px'>
+						<input type = 'radio' name = 'gender' required name ="gender"> 남 </label>
+						<label style = 'margin-left : 25px'>
+						<input type = 'radio' name = 'gender' required name ="gender"> 여 </label>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>전화번호</th>
+				<td>
+					<div>
+						<select name = 'call' style = "margin-left : 25px">
+							<option value = "c1">010</option>
+							<option value = "c2">011</option>
+						</select>
+						<input type = 'text' name = 'call' required style = 'width : 50px'>
+						<input type = 'text' name = 'call' required style = 'width : 50px'>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>sms수신여부</th>
+				<td>
+					<div>
+						<label style = 'margin-left : 25px'>
+						<input type = 'checkbox' name = 'sms' required name ="sms"> 수신함 </label>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>이메일</th>
+				<td>
+					<div>
+						<input type = 'text' name = 'mailid' required style = 'width : 80px; margin-left : 25px'> @
+						<select>
+							<option value = 'mail1'>직접입력</option>
+							<option value = 'mail2'>naver.com</option>
+						</select>
+						 
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>사진등록</th>
+				<td>
+					<div>
+						<input type = 'file' name = 'file' required style = 'margin-left : 25px'>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th colspan="2">
+					<input type = 'submit' name = 'signin' value = "가입">
+				</th>				
+			</tr>
+		</table> </form>
+	</body>
+</html>

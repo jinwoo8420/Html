@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>form</title>
+		<style>
+			table {
+				border-collapse : collapse;
+				width : 500px; 
+			}
+			th, td {
+				border : 1px solid #222; padding : 10px;
+			}
+			textarea {width : 300px; height : 200px; resize : none;}
+		</style>
+	</head>
+	<body>
+		<h2>입력 양식</h2>
+		
+		<p>form : 사용자의 입력을 받는 화면을 구성할 때 사용</p> <br>
+		입력한 데이터를 다른 페이지로 보낼 수 있음 <br>
+		ex) 로그인 할 때 아이디와 비밀번호를 입력하는 경우 <br>
+			회원가입 시 필요한 여러 정보를 입력하는 경우 <br><br>
+		
+		form 태그를 통해 입력 데이터를 내보내려면 name 태그 필요<br>
+		form 태그의 action 속성값이 없거나 action을 지정하지 않으면 자기 자신의 페이지 연결<br> 
+		autocomplete : 입력 태그의 자동완성 기능으로 기본은 on인 상태 사용하지 않을 시 off <br><br>
+		
+		파라미터 : 전송되는 입력 값 <br>
+		파라미터가 여러 개인 경우 $로 구분 <br>
+		파라미터가 노출 되는 형태 : method : get <br>
+		파라미터가 노출 되지 않는 형태 : method : post <br><br>
+		
+		placeholder : 텍스트 입력 태그에 무엇을 입력하는 태그인지 보여줌 <br>
+		required : 필수 입력 항목을 입력하지 않을 시 submit 되지 않도록 처리하려면
+		프로그래밍적으로 해결할 수도 있지만 태그 자체의 required 속성을 이용할 수 도 있다 <br><br>
+		
+		readonly : 입력 태그이지만 변경 불가하게 처리<br>
+		disabled : 입력 태그이지만 변경 불가하게 처리<br>
+		차이점 : readonly 속성을 갖는 태그는 submit 시 데이터가 전송 <br>
+				 disabled 속성을 갖는 태그는 submit 시 데이터가 전송되지 않음 <br><br>
+		
+		파일을 첨부하여 전송하는 경우는 반드시 method를 post로 지정해야만 한다<br>
+		enctype을 multipart/form-data로 지정해야만 한다<br>
+		<h3>input</h3>
+		
+		<table>
+			<tr>
+				<th>text</th>
+				<td>한 줄 텍스트 입력</td>
+			</tr>
+			<tr>
+				<th>password</th>
+				<td>입력 데이터가 보이지 않는 태그</td>
+			</tr>
+			<tr>
+				<th>radio</th>
+				<td>여러 항목 중에 한 개만 선택할 때 사용</td>
+			</tr>
+			<tr>
+				<th>hidden</th>
+				<td>실제 소스에는 있지만 화면에서는 보이지 않는 태그</td>
+			</tr>
+			<tr>
+				<th>checkbox</th>
+				<td>여러 항목을 모두 선택할 수 있는 태그</td>
+			</tr>
+			<tr>
+				<th>file</th>
+				<td>첨부할 파일을 선택하는 태그</td>
+			</tr>
+			<tr>
+				<th>submit</th>
+				<td>입력 데이터를 전송하는 버튼</td>
+			</tr>
+		</table>
+		
+		<br><hr><br>
+		
+		<table>
+			<tr>
+				<th>textarea</th>
+				<td>여러 줄을 입력하는데 사용하는 입력 텍스트 태그</td>				
+			</tr>
+			<tr>
+				<th>select</th>
+				<td>여러 개의 목록에서 선택하는 드랍다운 목록 태그</td>		
+			</tr>
+		</table>
+		
+		<hr>
+		
+		<form action = "" autocomplete = "off" method="get"> <!-- enctype="multipart/form-data" -->
+			<div>성명 : <input type = 'text' name = 'name' disabled value = "심청" required placeholder = '성명'></div>
+			<div>전화번호 : <input type = 'text' name = 'phone' placeholder = '전화번호' readonly value = 123-456></div>
+			<div>비밀번호 : <input type = 'password' required name = 'password' ></div>
+			<input type = 'hidden' name = 'id' value = 'hong'>
+			<div>과목선택<input type = 'radio' name = 'subject' value = '국어' id = "korean">
+						 <label for = "korean">국어</label>
+						 <input type = 'radio' name = 'subject' value = '영어' id = "engilsh" checked>
+						 <label for = 'english'>영어</label>
+			   			 <input type = 'radio' name = 'subject' value = '수학' id = "meth">
+			   			 <label for = 'meth'>수학</label>			
+			</div>
+			<div>성별선택<input type = 'radio' name = 'gender' value = '남' id = 'male' checked >
+						 <label for = 'male'>남</label>
+						 <input type = 'radio' name = 'gender' value = '여' id = 'female'>
+						 <label for = 'female'>여</label>
+			</div>
+			<div>다중선택 - 구기종목
+				<label><input type = 'checkbox' name = 'sports' value = '농구'>농구</label>				
+				<label><input type = 'checkbox' name = 'sports' value = '배구'>배구</label>
+				<label><input type = 'checkbox' name = 'sports' value = '축구'>축구</label>
+				<label><input type = 'checkbox' name = 'sports' value = '야구'>야구</label>
+				<label><input type = 'checkbox' name = 'sports' value = '탁구'>탁구</label>
+			</div>
+<!-- 			<div>파일선택 : <input type = 'file' name = 'filename'>
+			</div> -->
+			<div>여러 줄 입력 태그 : <textarea rows="5" cols="20" name = 'memo'></textarea>
+			<textarea name = 'memo'></textarea>		
+			</div>
+			<div>반려가족 : 
+				<select name = 'companion'>
+					<option value = 'c1'>개</option>
+					<option value = 'c2'>고양이</option>
+					<option value = 'c3'>새</option>
+					<option value = 'c4'>식물</option>
+			</select>
+			</div>
+			<div><input type = 'submit' value = '가입'></div>
+		</form>
+		
+		<hr>		
+		
+	</body>
+</html>

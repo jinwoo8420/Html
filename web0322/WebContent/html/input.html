@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Input</title>
+		<style>
+		h3 { color : blue } /* 내부스타일 */
+		</style>
+		<link rel = "stylesheet" href = "../css/common.css"> <!-- 외부스타일 -->
+	</head>
+	<body>
+		<a style = 'color : inherit; text-decoration : none' href = http://localhost:80/web0322>Home</a>
+		<h3>input 태그</h3>
+		<table>
+			<tr>
+				<th>number</th>
+				<td>숫자만 입력 가능</td>
+			</tr>
+			<tr>
+				<th>date</th>
+				<td>날짜 선택</td>
+			</tr>
+			<tr>
+				<th>month</th>
+				<td>월 선택</td>
+			</tr>
+			<tr>
+				<th>time</th>
+				<td>시간 선택</td>
+			</tr>
+			<tr>
+				<th>button</th>
+				<td>아무런 기능이 없는 버튼</td>
+			</tr>
+		</table>
+		
+		<hr> <!-- 명명() : 함수 / 명명된 함수 호출
+				window.open(url)
+				window.open(url, 창이름) / 창이름 : target 지정 가능 (_self, _blank(기본값))				
+				window.open(url, 창이름, 창속성)				
+		 -->
+		 
+		<input onclick = 'window.open("http://hrd.go.kr", "new_window")' type = "button" 
+		value = '새 창으로 HRD 열기'> <br>
+		<input onclick = 'window.open("http://google.com", "new_window")' type = "button" 
+		value = '새 창으로 구글 열기'> <br>
+		<input onclick = 'window.open("http://naver.com", "new_window")' type = "button" 
+		value = '새 창으로 네이버 열기'> <br>
+		
+		<hr>
+		
+		<input type="button" onclick = "window.open('../member/join.html','google', 'width = 500px, height = 400px')" 
+		value = '팝업'> <br>
+		<input type = 'button' onclick = 'window.open("../member/join.html")' value = '가입'> <br>
+		<input onclick = 'alert("naver")' type = "button" value = '알림메시지'> <br>
+		<input onclick = 'window.open("http://naver.com", "_self")' type = "button" 
+		value = '새 창으로 네이버 열기'> <br>
+		<input type = 'time' value = '16:24'> <br>
+		<input type = 'month' value = '2022-03'> <br>
+		<input type = 'date' value = '2022-03-22'> <br>
+		<input type = 'number' min = '1' max = '10' value = '1' step = '2'> <br>
+	</body>	
+</html>

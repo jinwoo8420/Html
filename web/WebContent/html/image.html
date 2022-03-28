@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	<title>Image</title>
+	<style>
+		img {
+			width : 640px;
+			height : 480px;			
+		}
+		a {
+			text-decoration : none;
+			color : inherit; /* initial; */
+		}
+	</style>
+	</head>
+	<body>
+		<h2 id = 'no1'>이미지태그</h2>
+		img 태그 : 폴더 내의 이미지 표현, 웹 상의 이미지 표현<br>
+		alt : 이미지 파일이 정상 로딩이 되지 않는 경우 이미지에 대한 설명<br>
+		title : 마우스를 갖다 대었을때 보여지는 설명<br><br>
+		
+		<h3 id = 'no2'>현재 페이지가 동일한 폴더에 있는 이미지 파일</h3><br>
+		<img src = './clouds.jpg' alt = "cloud" title = "cloud">
+		<img src = 'images/clouds.jpg'>
+		
+		<hr>
+		
+		<h3>현재 페이지가 아닌 폴더에 있는 이미지 파일</h3><br>		
+		<img src = '../images/clouds.jpg'>	
+		<img src = '../images/html/clouds.jpg'>	
+		
+		<hr>
+		
+		<a href = '#no2'><h3>웹 상의 이미지 표현</h3></a><br>
+		<img src = 'https://cdn.pixabay.com/photo/2022/02/28/15/28/sea-7039471_960_720.jpg'>
+		
+		<hr>
+		
+		<h2>링크</h2>
+		a태그 : 현재 웹 페이지에서 다른 페이지로 연결하기 위한 형태<br>
+		target : 링크 할 페이지를 새 창에서 연결하려면 _blank<br>
+		anchor : 현재 페이지에서 특정 위치로 연결 가능<br>
+		
+		<h3><a target = '_blank' href = 'http://naver.com'>네이버</a></h3>
+		<h3><a target = '_self' href = '#'>링크</a></h3>
+		
+	</body>
+</html>
