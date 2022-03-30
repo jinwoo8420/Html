@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style>
+			table {border-collapse : collapse;}
+			
+			table tr {border-bottom : 1px solid #ccc; height : 40px;}
+			
+			table tr:first-child {border-top : 1px solid #777;}
+			
+			table th {background-color : #eee; text-align : left;}
+			
+			table tr * {text-indent : 20px;}
+			
+			table tr:last-child { color : red; }
+			
+			tr:nth-child(2) { background-color : yellow; }
+			
+			tr:nth-child(3) { background-color : pink; }
+
+			tr:nth-child(2n) { background-color : lime; }
+
+			tr:nth-child(2n+1) { background-color : aqua; }
+			
+		</style>
+	</head>
+	<body>
+		<h3>Selector</h3>
+		
+		<table>
+			<colgroup>
+				<col width = "300px;">
+				<col width = "600px;">
+			</colgroup>
+			<tr>
+				<th>상위요소 하위효소</th>
+				<td>상위요소에 대한 자손요소(자식 포함)에 적용</td>
+			</tr>
+			<tr>
+				<th>상위요소 > 하위효소</th>
+				<td>상위요소에 대한 자식요소에 적용</td>
+			</tr>
+			<tr>
+				<th>요소:first-child</th>
+				<td>요소의 부모 입장에서 볼 때 첫번째 자식요소</td>
+			</tr>
+			<tr>
+			    <th>요소:last-child</th>
+				<td>요소의 부모 입장에서 볼 때 마지막 자식요소</td>
+			</tr>
+			<tr>
+				<th>요소:nth-child(1)</th>
+				<td>요소의 부모 입장에서 볼 때 n번째 자식요소
+				: nth-child(1) = first-child</td>
+			</tr>
+			<tr>
+				<th>요소:nth-last-child(n)</th>
+				<td>요소의 부모 입장에서 볼 때 뒤에서부터 n번째 자식요소
+				: nth-last-child(1) = last-child</td>
+			</tr>
+			<tr>
+				<th>요소:nth-last-child(2n)</th>
+				<td>짝수번째 자식요소</td>
+			</tr>
+			<tr>
+				<th>요소:nth-last-child(2n+1)</th>
+				<td>홀수번째 자식요소</td>
+			</tr>
+			<tr>
+				<th>요소1 + 요소2</th>
+				<td>요소1 이후에 나오는 첫번째 형제인 요소2에 대해 적용</td>
+			</tr>
+		</table>
+	</body>
+</html>
