@@ -3,26 +3,66 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>input</title>
+		<style>
+			input[type = text], input[type = password] {height : 25px;}
+			
+			input[type = checkbox] {width : 20px; height : 20px; vertical-align : middle;}
+
+			input[type = radio] {margin : 15px 0 15px 15px;}
+			
+			input:enabled {background-color : yellow;}
+
+			input:disabled {color : red; font-weight : bold;}
+
+			input:focus {background-color : orange;}
+
+			/* input:checked + label {color : aqua; font-weight : bold;} */
+			
+			/* radio와 checkbox 각각 checked를 저장하려면 */
+			input[type = radio]:checked + label  {color : red; font-weight : bold}
+			
+			input[type = checkbox]:checked + label  {color : green; font-weight : bold}
+			
+			ul li:hover {background-color : green;}
+			ul li:active {background-color : yellow;}
+
+		</style>
+		
 	</head>
 	<body>
+		<!-- 동작이나 상태와 관련된 가상 클래스
+		선택자: enabled 활성화된 선택자(입력 또는 선택 가능)
+		선택자: disabled 비활성화된 선택자(입력 또는 선택이 불가능)
+		선택자: checked 체크박스나 라디오버튼에서 체크 된 선택자
+		선택자: focus 커서를 갖는 선택자
+		선택자: hover 마우스를 올렸을 때 선택된 선택자
+		선택자: active 클릭하고 있는 동안 선택된 선택자
+		  -->
+		
 		<h3>입력양식선택자</h3>
 		<ul>
 			<li>성명 : <input type = "text" name = 'name' value = "홍길동"></li>
+			
 			<li>ID : <input type = "text" name = 'id'></li>
+			
 			<li>PassWord : <input type = "password" name = 'pw'></li>
+			
 			<li>성별 : 
 			<input type = "radio" name = 'gender' value = '남' id = 'male'>
 			<label for = 'male'>남</label>
 			<input type = "radio" name = 'gender' value = '여' id = 'female'>
-			<label for = 'female'>여</label></li>
+			<label for = 'female'>여</label>
+			</li>
+			
 			<li>취미 : 
 			<input type = "checkbox" name = 'hobby' value = '축구' id = 'soccer'>
 			<label for = 'soccer'>축구</label>
 			<input type = "checkbox" name = 'hobby' value = '농구' id = 'basket'>
-			<label for = 'soccer'>농구</label>
+			<label for = 'basket'>농구</label>
 			<input type = "checkbox" name = 'hobby' value = '야구' id = 'baseball'>
-			<label for = 'soccer'>야구</label>
+			<label for = 'baseball'>야구</label>
 			</li>
+			
 		</ul>
 	</body>
 </html>
