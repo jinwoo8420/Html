@@ -198,6 +198,41 @@
 				border : 1px solid #ddd;
 			}
 			
+			#popup-background {
+				display : none;
+				width : 100%; height : 100%;
+				position : fixed;
+				left : 0; top : 0;
+				/* background-color : rgba(0,0,0, 0.3); */
+				background-color : #000;
+				opacity : 0.3;
+			}
+			
+			#popup {
+				display : none;
+				width : 400px; height : 350px;
+				position : fixed;
+				left : 50%; top : 50%;
+				transform : translate(-50%, -50%);
+				border : 2px solid #333;
+			}
+			
+			#popup div {
+				height : 300px;
+			}
+			
+			#popup img {
+				width : 100%; height : 100%;
+			}
+			
+			#popup a {
+				display : inline-block;
+				width : 100%; height : 50px;
+				line-height : 50px;
+				text-align : center;
+				background-color : #fff;
+			}
+			
 		</style>
 		
 		<link rel = 'stylesheet' href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css'>
@@ -228,7 +263,7 @@
 				<nav id = 'tap'>
 					<ul>
 						<li class = 'on'>개발노하우</li>
-						<li>OPEN API 활용 문의</li>
+						<li onclick = 'popup("block")'>OPEN API 활용 문의</li>
 						<li>유용한 사이트</li>
 					</ul>
 				</nav>
@@ -366,9 +401,32 @@
 			</aside>
 			
 			<footer>
-				<p>(30116) 세종특별자치시 한누리대로 411(어진동, 행정안전부 별관)대표번호 : 1566-0025문의시간 : 09:00~18:00 (월~금)</p>
+				<p>(30116) 세종특별자치시 한누리대로 411(어진동, 행정안전부 별관)대표번호 : 1566-0025 문의시간 : 09:00~18:00 (월~금)</p>
 				<p>ⓒ행정안전부. All rights reserved.</p>
 			</footer>
 		</div>
+		
+		<div id = 'popup-background'></div>
+		<div id = 'popup'>
+			<div><img src = '../image/clouds.jpg'></div>
+			<a onclick = 'popup("none")'>닫기</a>
+		</div>
+		
+		<script>
+			function popup(value) {
+				document.getElementById('popup').style.display = value;
+				document.getElementById('popup-background').style.display = value;
+			}
+			
+			/* function popup_close() {
+				document.getElementById('popup').style.display = 'none';
+				document.getElementById('popup-background').style.display = 'none';
+			}
+			
+			function popup() {
+				document.getElementById('popup').style.display = 'block';
+				document.getElementById('popup-background').style.display = 'block';
+			} */
+		</script>
 	</body>
 </html>

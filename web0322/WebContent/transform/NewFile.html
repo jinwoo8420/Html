@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style>
+			ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+			
+			ul li {
+				float: left;
+				margin: 20px;
+			}
+			
+			ul li:not(:last-child) {
+				margin-right: 0;
+			}
+			
+			.slide_wrap {
+				width: 660px;
+				height: 240px;
+				border: 1px solid;
+				position: relative;
+				overflow: hidden;
+			}
+			
+			.slide {
+				position : absolute;
+				width : 1940px; height : 240px;
+			}
+			
+			.content {
+				width : 200px;
+				height : 200px;
+			}
+			
+			#box {margin : 50px;}
+			
+			#box .slide {
+				animation : box_slide 16s 2s infinite alternate;
+			}
+			
+			@keyframes box_slide {
+				0% {left : 0px;}
+				25% {left : -220px;}
+				50% {left : -440px;}
+				75% {left : -660px;}
+				100% {left : -880px;}
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id = 'box'>
+			<div class = 'slide_wrap'>
+				<div class = 'slide'>
+					<ul>
+						<li class = 'content'>1</li>
+						<li class = 'content'>2</li>
+						<li class = 'content'>3</li>
+						<li class = 'content'>4</li>
+						<li class = 'content'>5</li>
+						<li class = 'content'>6</li>
+					</ul>
+				</div>
+			</div>			
+		</div>
+	</body>
+</html>
