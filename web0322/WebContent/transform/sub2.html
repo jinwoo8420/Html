@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<style>
+			body {margin : 0;}
+			
+			ul {margin : 0; padding : 0; list-style : none;}
+			
+			a {text-decoration : none; color : inherit;}
+			
+			header {min-width : 1200px; border-bottom : 1px solid #aaa;}
+			
+			header nav {width : 1200px; margin : 0 auto;}
+			
+			header nav > ul {display : inline-block; margin : 30px 0;}
+			
+			#category > li {float : left;}
+			
+			#category > li:not(:first-child) {margin-left : 100px;}
+			
+			#category .submenu {
+				position : absolute;
+				left : 0; top : 86px; width : 100%; min-width : 1200px;
+				background-color : #f5f6ff;
+				border-bottom : 1px solid #ddd;
+				transform : scaleY(0);
+				transform-origin : top;
+				transition : 0.3s;
+				box-shadow : 0 4px 4px 2px #eee;
+			}
+			
+			#category .menu:hover + .submenu {
+				transform : scaleY(1);
+			}
+			
+			#category .submenu li {
+				width : 200px; margin : 20px 0; display : inline-block; 
+			}
+			
+			#category .submenu li:not(:first-child) {margin-top : 10px;}
+			
+		</style>
+		
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul id = 'category'>
+					<li>
+						<a class = 'menu'>category1</a>
+						<div class = 'submenu'>
+							<nav>
+								<ul>
+									<li><a>category1 sub1 menu1</a></li>
+									<li><a>category1 sub1 menu2</a></li>
+									<li><a>category1 sub1 menu3</a></li>
+									<li><a>category1 sub1 menu4</a></li>
+								</ul>
+								<ul>
+									<li><a>category1 sub2 menu1</a></li>
+									<li><a>category1 sub2 menu2</a></li>
+									<li><a>category1 sub2 menu3</a></li>
+								</ul>
+							</nav>
+						</div>
+					</li>
+				</ul>
+				<ul id = 'category'>
+					<li>
+						<a class = 'menu'>category2</a>
+						<div class = 'submenu'>
+							<nav>
+								<ul>
+									<li><a>category2 sub1 menu1</a></li>
+									<li><a>category2 sub1 menu2</a></li>
+									<li><a>category2 sub1 menu3</a></li>
+									<li><a>category2 sub1 menu4</a></li>
+								</ul>
+								<ul>
+									<li><a>category2 sub2 menu1</a></li>
+									<li><a>category2 sub2 menu2</a></li>
+									<li><a>category2 sub2 menu3</a></li>
+								</ul>
+							</nav>
+						</div>
+					</li>
+				</ul>
+				<ul id = 'category'>
+					<li>
+						<a class = 'menu'>category3</a>
+						<div class = 'submenu'>
+							<nav>
+								<ul>
+									<li><a>category3 sub1 menu1</a></li>
+									<li><a>category3 sub1 menu2</a></li>
+									<li><a>category3 sub1 menu3</a></li>
+									<li><a>category3 sub1 menu4</a></li>
+								</ul>
+								<ul>
+									<li><a>category3 sub2 menu1</a></li>
+									<li><a>category3 sub2 menu2</a></li>
+									<li><a>category3 sub2 menu3</a></li>
+								</ul>
+							</nav>
+						</div>
+					</li>
+				</ul>
+				<ul id = 'category'>
+					<li>
+						<a class = 'menu'>category4</a>
+					</li>
+				</ul>
+				<ul id = 'category'>
+					<li>
+						<a class = 'menu'>category5</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+	</body>
+</html>
